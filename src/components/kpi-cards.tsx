@@ -47,11 +47,10 @@ export default function KpiCards({ stats }: KpiCardsProps) {
           <div className="flex justify-between items-start">
             <div className={`p-3 rounded-xl ${item.bgClass}`}>{item.icon}</div>
             <div
-              className={`flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                item.isNegative
+              className={`flex items-center px-2 py-1 rounded-full text-xs font-medium ${item.isNegative
                   ? "bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400"
                   : "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400"
-              }`}
+                }`}
             >
               <TrendingUp className={`h-3 w-3 mr-1 ${item.isNegative ? "rotate-180" : ""}`} />
               {Math.abs(item.growth)}%

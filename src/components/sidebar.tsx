@@ -13,9 +13,8 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`${
-        collapsed ? "w-20" : "w-64"
-      } transition-all duration-300 bg-white dark:bg-gray-900 border-r border-gray-100 dark:border-gray-800 flex flex-col`}
+      className={`${collapsed ? "w-20" : "w-64"
+        } transition-all duration-300 bg-white dark:bg-gray-900 border-r border-gray-100 dark:border-gray-800 sm:flex flex-col hidden`}
     >
       <div className="p-6 flex items-center justify-between">
         <div className={`flex items-center ${collapsed ? "justify-center w-full" : ""}`}>
@@ -45,13 +44,11 @@ export default function Sidebar() {
             <li key={index}>
               <a
                 href="#"
-                className={`flex items-center ${
-                  collapsed ? "justify-center" : ""
-                } px-4 py-3 rounded-xl text-sm font-medium ${
-                  item.active
+                className={`flex items-center ${collapsed ? "justify-center" : ""
+                  } px-4 py-3 rounded-xl text-sm font-medium ${item.active
                     ? "bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400"
                     : "text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                }`}
+                  }`}
               >
                 <item.icon className={`h-5 w-5 ${item.active ? "text-indigo-600 dark:text-indigo-400" : ""}`} />
                 {!collapsed && <span className="ml-3">{item.label}</span>}
@@ -66,9 +63,8 @@ export default function Sidebar() {
           <li>
             <a
               href="#"
-              className={`flex items-center ${
-                collapsed ? "justify-center" : ""
-              } px-4 py-3 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800`}
+              className={`flex items-center ${collapsed ? "justify-center" : ""
+                } px-4 py-3 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800`}
             >
               <HelpCircle className="h-5 w-5" />
               {!collapsed && <span className="ml-3">Help</span>}
@@ -77,9 +73,8 @@ export default function Sidebar() {
           <li>
             <a
               href="#"
-              className={`flex items-center ${
-                collapsed ? "justify-center" : ""
-              } px-4 py-3 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800`}
+              className={`flex items-center ${collapsed ? "justify-center" : ""
+                } px-4 py-3 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800`}
             >
               <LogOut className="h-5 w-5" />
               {!collapsed && <span className="ml-3">Logout</span>}

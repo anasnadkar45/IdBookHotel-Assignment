@@ -12,7 +12,6 @@ export default function Dashboard() {
     const [stats, setStats] = useState<Stats | null>(null)
     const [loading, setLoading] = useState(true)
 
-
     useEffect(() => {
         const loadData = async () => {
             try {
@@ -31,6 +30,7 @@ export default function Dashboard() {
 
     return (
         <div className="flex w-screen h-screen bg-gray-100 dark:bg-[#121212]">
+            
             <Sidebar />
             <div className="flex-1 flex flex-col overflow-hidden">
                 <Header />
