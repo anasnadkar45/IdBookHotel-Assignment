@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🧑‍💻 Frontend Developer Coding Assignment - User Dashboard
 
-Currently, two official plugins are available:
+## 📌 Objective
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Build a modern and responsive **User Dashboard** using React, TypeScript, Tailwind CSS, and Zustand. The dashboard showcases basic analytics, a chart, and a filterable/sortable user table with a clean UI and dark mode support.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- 🌗 **Dark/Light Mode Toggle** (Zustand)
+- 📊 **KPI Cards** (Total Users, New Signups, Active Sessions)
+- 📈 **Line/Bar Chart** showing weekly signups (ApexCharts)
+- 📋 **User Table** with:
+  - Filter by name/email (case-insensitive)
+  - Sort by Name and Joined Date
+- 🔎 **Search Input** for real-time filtering
+
+---
+
+## 🛠 Tech Stack
+
+- ⚛️ **React** (with Hooks)
+- 🟦 **TypeScript**
+- 🎨 **Tailwind CSS**
+- 🌗 **Zustand** for state management
+- 📊 **React Charts 2**
+- 🌐 **Axios** for mock API
+- 📋 **React Table** for user table
+
+---
+
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/anasnadkar45/IdBookHotel-Assignment.git
+cd IdBookHotel-Assignment
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# or
+yarn install
 ```
+
+### 3. Start the dev server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+### 4. Open in browser
+
+Navigate to `http://localhost:5173` (or the port shown in terminal).
+
+---
+
+## 🌐 Live Demo
+
+[Click here to view the live site](https://id-book-hotel-assignment.vercel.app/)
+
+---

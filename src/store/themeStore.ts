@@ -20,7 +20,7 @@ export const useThemeStore = create<ThemeState>()(
       setTheme: (theme: Theme) => set({ theme })
     }),
     {
-      name: 'theme-storage', // localStorage key
+      name: 'theme-storage', 
     }
   )
 )
