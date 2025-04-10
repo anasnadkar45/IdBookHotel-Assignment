@@ -60,7 +60,7 @@ export default function Dashboard() {
                                         <div className="flex justify-between items-center">
                                             <span className="text-gray-600 dark:text-gray-400">Active Users</span>
                                             <span className="text-gray-900 dark:text-white font-medium">
-                                                {Math.round(stats?.totalUsers * 0.8)}
+                                                {stats ? Math.round(stats.totalUsers * 0.8) : 0}
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2">
